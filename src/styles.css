@@ -1,80 +1,55 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  overflow: hidden;
+    background-color: #f3f1cc;
+    font-family: sans-serif;
 }
 
-.app {
-  width: calc(120vw);
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+.container {
+    background-color: white;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 15px;
+    justify-content: center;
+    height:300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
 
-.slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-}
+  .top_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+  }
 
-.slide {
-  cursor: pointer;
-  position: absolute;
-  width: 45vmin;
-  height: 45vmin;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 4vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10vmin;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
-}
+  .top_container span{
+    color: #4a6a62;
+    font-size: 20px;
+  }
 
-.buttons {
-  position: fixed;
-  top: 12vmin;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  gap: 5vmin;
-}
+  .progress{
+    position: relative;
+    height: 20px;
+    width: 200px;
+    background-color: rgb(233,236,239);
+    border-radius: 15px;
+    overflow: hidden;
+  }
 
-button {
-  opacity: 0.8;
-  display: block;
-  width: 22vmin;
-  height: 8vmin;
-  border-radius: 1vmin;
-  border: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  font-size: 3vmin;
-  cursor: pointer;
-  color: #1a1a1a;
-}
+  .progress span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
 
-button:hover {
-  opacity: 1;
-}
-
-button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
+  .progress div {
+    height: 100%;
+    background-color: #00c251;
+  }
