@@ -1,0 +1,55 @@
+body {
+    background-color: #f3f1cc;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: white;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 15px;
+    justify-content: center;
+    height:300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .top_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    align-items: center;
+  }
+
+  .top_container span{
+    color: #4a6a62;
+    font-size: 20px;
+  }
+
+  .progress{
+    position: relative;
+    height: 20px;
+    width: 200px;
+    background-color: rgb(233,236,239);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .progress span {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .progress div {
+    height: 100%;
+    background-color: #00c251;
+  }
