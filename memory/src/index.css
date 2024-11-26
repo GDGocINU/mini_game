@@ -68,3 +68,16 @@ img {
     transform: scale(0);
   }
 }
+
+.card.active{
+  transform: rotateY(0);
+}
+.card.correct{
+  background-color: rgb(17, 17, 233);
+}
+.card.wrong{
+  background-color: crimson;
+}
+.card.active img{
+  transform: scale(1);
+}

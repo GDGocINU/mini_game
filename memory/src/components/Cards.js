@@ -3,12 +3,12 @@ import Card from './Card'
 
 function Cards() {
     const [items, setItems] = useState([
-        { id: 1, img: '/img/1.jpeg', stat:"active"},
         { id: 1, img: '/img/1.jpeg', stat:" "},
-        { id: 2, img: '/img/2.jpeg', stat:"correct "},
+        { id: 1, img: '/img/1.jpeg', stat:" "},
+        { id: 2, img: '/img/2.jpeg', stat:" "},
         { id: 2, img: '/img/2.jpeg', stat:" "},
         { id: 3, img: '/img/3.jpeg', stat:" "},
-        { id: 3, img: '/img/3.jpeg', stat:"wrong"},
+        { id: 3, img: '/img/3.jpeg', stat:" "},
         { id: 4, img: '/img/4.jpeg', stat:" "},
         { id: 4, img: '/img/4.jpeg', stat:" "},
         { id: 5, img: '/img/5.jpeg', stat:" "},
@@ -24,7 +24,34 @@ function Cards() {
 
     const [prev, setPrev] = useState(-1)
 
+    function check(current){
+        if(items[current].id == items[prev].id) {
+            items[current].stat = "correct"
+            items[prev].stat = "correct"
+            setItems([...items])
+            setPrev(-1)
+        }else{
+            items[current].stat = "wrong"
+            items[prev].stat = "wrong"
+            setItems([...items])
+            setTimeout(() => {
+                    items[current].stat = " "
+                    items[prev].stat = " "
+                    setItems([...items])
+                    setPrev(-1)
+            }, 1000)
+        }
+
+    }
+
     function handleClick(id){
+        if(prev === -1){
+            items[id].stat = "active"
+            setItems([...items])
+            setPrev(id)
+        }else{
+            check(id)
+        }
     }
 
     return (
